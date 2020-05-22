@@ -18,7 +18,7 @@
         <th>Publisher</th>
     </tr>
 
-    <!-- Thymeleaf generates books dynamically -->
+    <!-- Thymeleaf (th) generates books dynamically -->
     <tr th:each = "book : ${books}">    <!-- Thymeleaf is going to render this element tr. It is gonna iterate each book -->
         <td th:text = "${book.id}">123</td>
         <td th:text = "${book.title}">Spring in Action</td>

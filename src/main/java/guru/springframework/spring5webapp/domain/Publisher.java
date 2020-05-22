@@ -7,7 +7,7 @@ import java.util.Set;
 @Entity
 public class Publisher {
 
-    @Id
+    @Id //The Id property is mapped to the primary key in the underlying database. Thus it is used to persist and retrieve object from the database.
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 

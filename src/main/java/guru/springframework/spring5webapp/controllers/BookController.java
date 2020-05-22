@@ -5,7 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@Controller
+@Controller //The @Controller annotation tells the Spring Framework this class is to be added into the Spring Context as a controller.
 public class BookController {
 
     private final BookRepository bookRepository;
@@ -19,6 +19,6 @@ public class BookController {
         
         model.addAttribute("books", bookRepository.findAll());
         
-        return "books/list";
+        return "books/list"; //Denetleyici metodlar nesneleri değil, görünüm (view) dosyalarının adlarını döndürür (thanks to @Controller).
     }
 }
