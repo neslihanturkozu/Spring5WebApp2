@@ -1,0 +1,34 @@
+<!-- Go to http://localhost:8080/authors to check -->
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Spring Framework Guru</title>
+</head>
+
+<body>
+
+<h1>Author List</h1>
+
+<table>
+
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+    </tr>
+
+    <!-- Thymeleaf (th) generates books dynamically -->
+    <tr th:each = "author : ${authors}">    <!-- Thymeleaf is going to render this element tr. It is gonna iterate each book -->
+        <td th:text = "${author.id}">123</td>
+        <td th:text = "${author.firstName}">Joe</td>
+        <td th:text = "${author.lastName}">Smith</td>
+    </tr>
+
+</table>
+
+</body>
+
+</html>
